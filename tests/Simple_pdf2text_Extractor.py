@@ -1,3 +1,4 @@
+# install the packages
 # pip install pytesseract pillow pdf2image
 
 
