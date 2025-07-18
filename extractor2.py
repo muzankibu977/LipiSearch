@@ -172,6 +172,7 @@ class BanglaPDFTextExtractor:
 if __name__ == "__main__":
     # Example usage
     pdf_path = "C:\\Users\\sihab\\Downloads\\Documents\\মকতুবাত শরীফ ০৪.pdf"  # Replace with your PDF path
+    # pdf_path = "C:\\Users\\sihab\\Downloads\\Documents\\Vol-30.pdf"  # Replace with your PDF path
     
     try:
         extractor = BanglaPDFTextExtractor(pdf_path)
@@ -191,7 +192,7 @@ if __name__ == "__main__":
         #     print(f"Page {page_num}: {len(text)} characters extracted")
         
         # Get page information
-        page_info = extractor.get_page_info(1)
+        page_info = extractor.get_page_info(page_number)
         print(f"\nPage info: {page_info}")
         
         # Save to file
