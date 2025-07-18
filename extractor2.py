@@ -19,7 +19,7 @@ class BanglaPDFTextExtractor:
         
         # Configure Tesseract for Bangla OCR
         # You might need to adjust the path based on your system
-        # pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'  # Windows
+        pytesseract.pytesseract.tesseract_cmd = r"C:\\Program Files\\Tesseract-OCR\\tesseract.exe"  # Windows
         
     def extract_text_from_page(self, page_number: int) -> str:
         """
@@ -168,3 +168,36 @@ class BanglaPDFTextExtractor:
     def close(self):
         """Close the PDF document"""
         self.doc.close()
+
+if __name__ == "__main__":
+    # Example usage
+    pdf_path = "C:\\Users\\sihab\\Downloads\\Documents\\মকতুবাত শরীফ ০৪.pdf"  # Replace with your PDF path
+    
+    try:
+        extractor = BanglaPDFTextExtractor(pdf_path)
+        
+        # Extract text from specific page
+        page_number = input("Enter a valid page number: ")  # Change this to your desired page
+        text = extractor.extract_text_from_page(page_number)
+        print(f"Text from page {page_number}:")
+        print(text)
+        print("\n" + "="*50 + "\n")
+        
+        # # Extract text from multiple pages
+        # pages_to_extract = [1, 2, 3]  # Change these to your desired pages
+        # all_texts = extractor.extract_text_from_pages(pages_to_extract)
+        
+        # for page_num, text in all_texts.items():
+        #     print(f"Page {page_num}: {len(text)} characters extracted")
+        
+        # Get page information
+        page_info = extractor.get_page_info(1)
+        print(f"\nPage info: {page_info}")
+        
+        # Save to file
+        extractor.save_extracted_text(pages_to_extract, "extracted_text.txt")
+        
+        extractor.close()
+        
+    except Exception as e:
+        print(f"Error: {e}")
