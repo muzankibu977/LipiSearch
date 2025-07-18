@@ -177,7 +177,7 @@ if __name__ == "__main__":
         extractor = BanglaPDFTextExtractor(pdf_path)
         
         # Extract text from specific page
-        page_number = input("Enter a valid page number: ")  # Change this to your desired page
+        page_number = int(input("Enter a valid page number: "))  # Change this to your desired page
         text = extractor.extract_text_from_page(page_number)
         print(f"Text from page {page_number}:")
         print(text)
