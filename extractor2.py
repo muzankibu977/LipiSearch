@@ -195,8 +195,8 @@ if __name__ == "__main__":
         page_info = extractor.get_page_info(page_number)
         print(f"\nPage info: {page_info}")
         
-        # Save to file
-        extractor.save_extracted_text(pages_to_extract, "extracted_text.txt")
+        # # Save to file
+        # extractor.save_extracted_text(pages_to_extract, "extracted_text.txt")
         
         extractor.close()
         
