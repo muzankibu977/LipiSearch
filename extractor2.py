@@ -4,6 +4,7 @@ from PIL import Image
 import io
 import os
 from typing import List, Union
+import streamlit as st
 
 
 class BanglaPDFTextExtractor:
@@ -194,6 +195,8 @@ if __name__ == "__main__":
         # Get page information
         page_info = extractor.get_page_info(page_number)
         print(f"\nPage info: {page_info}")
+
+        st.text(text)
         
         # # Save to file
         # extractor.save_extracted_text(pages_to_extract, "extracted_text.txt")
