@@ -1,0 +1,12 @@
+# Tesseract OCR Language Installation
+
+To recognize Bangla, Urdu, Hebrew etc., install language packs:
+
+Example for Ubuntu:
+
+sudo apt install tesseract-ocr-beng tesseract-ocr-urd tesseract-ocr-heb
+
+Or download language data from:
+https://github.com/tesseract-ocr/tessdata
+
+And put it in your TESSDATA_PREFIX path.
