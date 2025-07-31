@@ -1,0 +1,7 @@
+streamlit
+pdfplumber
+pytesseract
+Pillow
+PyMuPDF
+opencv-python
+langdetect
