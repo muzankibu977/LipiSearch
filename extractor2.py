@@ -1,3 +1,4 @@
+#install requirements to run this script
 import fitz  # PyMuPDF
 import pytesseract
 from PIL import Image
